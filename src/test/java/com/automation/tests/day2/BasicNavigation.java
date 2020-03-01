@@ -19,6 +19,7 @@ public class BasicNavigation {
         String expectedTitle = "Google";
 
         System.out.println("The title is : "+title);
+        System.out.println("The URL is : "+driver.getCurrentUrl());
 
         if (expectedTitle.equals(title)){
             System.out.println("TEST PASSED!");
@@ -26,11 +27,40 @@ public class BasicNavigation {
             System.out.println("TEST FAILED!");
         }
 
+        driver.navigate().to("http://amazon.com");
+        Thread.sleep(3000); // for demo, wait 3 seconds
+        System.out.println("The URL is : "+driver.getCurrentUrl());
+
+
+        if (driver.getTitle().toLowerCase().contains("amazon")){
+            System.out.println("TEST PASSED");
+        }else {
+            System.out.println("FAILED");
+        }
+        // come back to google
+        driver.navigate().back();
+
+        verifyEquals(driver.getTitle(),"Google");
+
+        driver.navigate().forward();
+
+        System.out.println("The title of second page : "+driver.getTitle());
+        System.out.println("The URL is : "+driver.getCurrentUrl());
+        driver.navigate().refresh();
+        Thread.sleep(3000); // for demo, wait 3 seconds
+
         driver.close(); // to close the website
 
 
 
 
 
+    }
+    public static void verifyEquals(String arg1, String arg2){
+        if (arg1.equals(arg2)){
+            System.out.println("TEST PASSED");
+        }else {
+            System.out.println("TEST FAILED");
+        }
     }
 }
