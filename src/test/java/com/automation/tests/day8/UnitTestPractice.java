@@ -27,6 +27,7 @@ public class UnitTestPractice {
     }
 
 
+
     public static boolean verifyEquals(String expected, String actual){
         if (expected.equals(actual)){
             System.out.println("TEST PASSED");
