@@ -22,7 +22,7 @@ public class FileUploading {
         String filePath = System.getProperty("user.dir")+"/pom.xml";
         String filePath2 ="/Users/user/IdeaProjects/Fall2019Selenium/pom.xml";
 
-        String filePath3 = "/Users/user/Desktop/Screenshot at Feb 23 12-09-55.png";
+        String filePath3 = "/Users/user/Desktop/text.txt";
 
         upload.sendKeys(filePath3);
 
