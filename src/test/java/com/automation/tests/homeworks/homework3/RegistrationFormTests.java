@@ -293,101 +293,101 @@ public class RegistrationFormTests {
     // Step 2. And click on “Status Codes”.
     // Step 3. Then click on “200”.
     // Step 4. Verify that following message is displayed: “This page returned a 200 status code”
-    @Test
-    public void test9(){
-        driver.get(URL);
-        driver.manage().window().maximize();
-        BrowserUtils.wait(3);
-
-        driver.findElement(By.xpath("//*[text()='Status Codes']")).click();
-        BrowserUtils.wait(3);
-
-        driver.findElement(By.linkText("200")).click();
-        BrowserUtils.wait(3);
-
-        String expected = "This page returned a 200 status code.";
-        WebElement text = driver.findElement(By.xpath("//p"));
-        String actual = text.getText();
-        //assertEquals(actual,expected);
-
-        System.out.println("expected = " + expected);
-        System.out.println("actual = " + actual);
-        assertTrue(actual.contains(expected));
-    }
-
-
-
-
-    //Step 2. And click on “Status Codes”.
-    // Step 3. Then click on “301”.
-    // Step 4. Verify that following
-    //message is displayed:
-    // “This page returned a 301 status code”
-    @Test
-    public void test10(){
-        driver.get(URL);
-        driver.manage().window().maximize();
-        BrowserUtils.wait(3);
-
-        driver.findElement(By.xpath("//*[text()='Status Codes']")).click();
-        BrowserUtils.wait(3);
-
-        driver.findElement(By.linkText("301")).click();
-        BrowserUtils.wait(3);
-
-        String expected = "This page returned a 301 status code.";
-        String actual = driver.findElement(By.xpath("//p")).getText();
-        assertTrue(actual.contains(expected));
-
-        System.out.println("expected = " + expected);
-        System.out.println("actual = " + actual);
-
-
-    }
-    @Test
-    public void test11(){
-        driver.get(URL);
-        driver.manage().window().maximize();
-        BrowserUtils.wait(3);
-
-        driver.findElement(By.xpath("//*[text()='Status Codes']")).click();
-        BrowserUtils.wait(3);
-
-        driver.findElement(By.linkText("404")).click();
-        BrowserUtils.wait(3);
-
-        String expected = "This page returned a 404 status code.";
-        String actual = driver.findElement(By.xpath("//p")).getText();
-        assertTrue(actual.contains(expected));
-
-        System.out.println("expected = " + expected);
-        System.out.println("actual = " + actual);
-
-
-    }
-
-
-    @Test
-    public void test12(){
-        driver.get(URL);
-        driver.manage().window().maximize();
-        BrowserUtils.wait(3);
-
-        driver.findElement(By.xpath("//*[text()='Status Codes']")).click();
-        BrowserUtils.wait(3);
-
-        driver.findElement(By.linkText("500")).click();
-        BrowserUtils.wait(3);
-
-        String expected = "This page returned a 500 status code.";
-        String actual = driver.findElement(By.xpath("//p")).getText();
-        assertTrue(actual.contains(expected));
-
-        System.out.println("expected = " + expected);
-        System.out.println("actual = " + actual);
-
-
-    }
+//    @Test
+//    public void test9(){
+//        driver.get(URL);
+//        driver.manage().window().maximize();
+//        BrowserUtils.wait(3);
+//
+//        driver.findElement(By.xpath("//*[text()='Status Codes']")).click();
+//        BrowserUtils.wait(3);
+//
+//        driver.findElement(By.linkText("200")).click();
+//        BrowserUtils.wait(3);
+//
+//        String expected = "This page returned a 200 status code.";
+//        WebElement text = driver.findElement(By.xpath("//p"));
+//        String actual = text.getText();
+//        //assertEquals(actual,expected);
+//
+//        System.out.println("expected = " + expected);
+//        System.out.println("actual = " + actual);
+//        assertTrue(actual.contains(expected));
+//    }
+//
+//
+//
+//
+//    //Step 2. And click on “Status Codes”.
+//    // Step 3. Then click on “301”.
+//    // Step 4. Verify that following
+//    //message is displayed:
+//    // “This page returned a 301 status code”
+//    @Test
+//    public void test10(){
+//        driver.get(URL);
+//        driver.manage().window().maximize();
+//        BrowserUtils.wait(3);
+//
+//        driver.findElement(By.xpath("//*[text()='Status Codes']")).click();
+//        BrowserUtils.wait(3);
+//
+//        driver.findElement(By.linkText("301")).click();
+//        BrowserUtils.wait(3);
+//
+//        String expected = "This page returned a 301 status code.";
+//        String actual = driver.findElement(By.xpath("//p")).getText();
+//        assertTrue(actual.contains(expected));
+//
+//        System.out.println("expected = " + expected);
+//        System.out.println("actual = " + actual);
+//
+//
+//    }
+//    @Test
+//    public void test11(){
+//        driver.get(URL);
+//        driver.manage().window().maximize();
+//        BrowserUtils.wait(3);
+//
+//        driver.findElement(By.xpath("//*[text()='Status Codes']")).click();
+//        BrowserUtils.wait(3);
+//
+//        driver.findElement(By.linkText("404")).click();
+//        BrowserUtils.wait(3);
+//
+//        String expected = "This page returned a 404 status code.";
+//        String actual = driver.findElement(By.xpath("//p")).getText();
+//        assertTrue(actual.contains(expected));
+//
+//        System.out.println("expected = " + expected);
+//        System.out.println("actual = " + actual);
+//
+//
+//    }
+//
+//
+//    @Test
+//    public void test12(){
+//        driver.get(URL);
+//        driver.manage().window().maximize();
+//        BrowserUtils.wait(3);
+//
+//        driver.findElement(By.xpath("//*[text()='Status Codes']")).click();
+//        BrowserUtils.wait(3);
+//
+//        driver.findElement(By.linkText("500")).click();
+//        BrowserUtils.wait(3);
+//
+//        String expected = "This page returned a 500 status code.";
+//        String actual = driver.findElement(By.xpath("//p")).getText();
+//        assertTrue(actual.contains(expected));
+//
+//        System.out.println("expected = " + expected);
+//        System.out.println("actual = " + actual);
+//
+//
+//    }
 
 
 
