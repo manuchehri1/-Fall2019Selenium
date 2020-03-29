@@ -84,4 +84,59 @@ public class JavaScriptExecutorPractice {
         String pageTitle = js.executeScript("return document.title").toString();
         System.out.println(pageTitle);
     }
+
+
+    @Test(description = "clicking on an element")
+    public void test3(){
+        WebDriver driver = DriverFactory.createDriver("chrome");
+        //Navigating to etsy homepage
+        driver.get("https://www.etsy.com/");
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+
+        js.executeScript("document.getElementById('catnav-primary-link-891').click();");
+    }
+
+    @Test(description = "")
+    public void test4(){
+        WebDriver driver = DriverFactory.createDriver("chrome");
+        //Navigating to etsy homepage
+        driver.get("https://www.etsy.com/");
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        String pageUrl = js.executeScript("return document.URL ").toString();
+        System.out.println("pageUrl = " + pageUrl);
+
+        driver.quit();
+
+    }
+
+    @Test
+    public void test5(){
+        WebDriver driver = DriverFactory.createDriver("chrome");
+        //Navigating to etsy homepage
+        driver.get("https://www.etsy.com/");
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+
+        String str = js.executeScript("return document.getElementById('catnav-primary-link-11049').innerHTML;").toString();
+        System.out.println("str = " + str);
+
+        driver.quit();
+    }
+
+    @Test
+    public void test6(){
+        WebDriver driver = DriverFactory.createDriver("chrome");
+        //Navigating to etsy homepage
+        driver.get("https://www.etsy.com/");
+        driver.manage().window().maximize();
+        JavascriptExecutor js = (JavascriptExecutor)driver;
+        BrowserUtils.wait(2);
+
+        js.executeScript("document.getElementById('email-list-signup-email-input').scrollIntoView()");
+
+        BrowserUtils.wait(2);
+        driver.quit();
+
+    }
+
+
 }
